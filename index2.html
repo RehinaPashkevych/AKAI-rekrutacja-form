@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      charset="utf-8"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="setting.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>AKAI!</title>
+    <link rel="shortcut icon" href="AKAI-logo.svg" type="image/svg" />
+  </head>
+
+  <body class="page light-theme">
+    <header class="page-header">
+      <div class="container">
+        <a class="header-link" href="#">Główna</a>
+        <button class="theme-button" type="button">Zmienić wygląd</button>
+      </div>
+    </header>
+
+    <main class="inner-main">
+      <p class="subscription-message">
+        Jesteśmy Akademickim Kołem Aplikacji Internetowych i właśnie
+        rozpoczynamy rekrutację do naszego koła! Dołącz do nas!
+      </p>
+      <section id="task-frontend">
+        <div class="container">
+          <form method="POST" class="subscription" >
+            <!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
+            <div class="subscription-inner">
+              <label for="first-name"></label>
+              <input
+                class="text-field__input text-field__input_invalid"
+                placeholder="Imię"
+                type="text"
+                name="name"
+                id="first-name"
+                required
+              />
+              <div class="text-field__message"></div>
+
+              <label for="last-name"></label>
+              <input
+                class="text-field__input text-field__input_invalid"
+                placeholder="Nazwisko"
+                type="text"
+                name="last-name"
+                id="last-name"
+                required
+              />
+              <div class="text-field__message"></div>
+
+              <div class="text-field__icon">
+                <label for="email"></label>
+                <input
+                  type="email"
+                  class="text-field__input text-field__input_invalid"
+                  placeholder="Email"
+                  id="email"
+                  name="email"
+                  required
+                />
+                <img
+                  class="text-field__aicon"
+                  src="email.svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                />
+                <div class="text-field__message"></div>
+              </div>
+
+              <span class="slc"><b>Sekcja</b></span>
+              <div>
+                <input
+                  type="checkbox"
+                  id="frontend-checkbox"
+                  name="section"
+                  value="frontend"
+                />
+                <label for="frontend-checkbox">Frontend</label>
+                <input
+                  type="checkbox"
+                  id="backend-checkbox"
+                  name="section"
+                  value="frontend"
+                />
+                <label for="backend-checkbox">Backend</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="mobile-checkbox"
+                  name="section"
+                  value="frontend"
+                />
+                <label for="mobile-checkbox">Mobile</label>
+                <input
+                  type="checkbox"
+                  id="graphics-checkbox"
+                  name="section"
+                  value="frontend"
+                />
+                <label for="graphics-checkbox">Grafika</label>
+              </div>
+            </div>
+
+            <button
+              class="button subscription-button"
+              id="button-1"
+              type="submit"
+            >
+              <span>Prześlij</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+
+    
+
+    <footer class="page-footer">
+      <div>
+        <a class="footer-logo">
+          <img class="logo" src="AKAI-logo.svg" alt="AKAI`s logo!" />
+        </a>
+      </div>
+      <div><p>© AKAI!</p></div>
+    </footer>
+    <script src="scrpt.js"></script>
+  </body>
+</html>
